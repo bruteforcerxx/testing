@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="description" content="Green Trust bank is an online banking and international money transfer organisation,
+  geared towards providing the best channel and means of transfering money both locally and internationally.">
+  <meta name="theme-color" content="#270c67">
+      <!-- Windows Phone -->
+ <meta name="msapplication-navbutton-color" content="#270c67">
+     <!-- iOS Safari -->
+ <meta name="apple-mobile-web-app-status-bar-style" content="#270c67">
+<title>Apex Trust Green bank</title>
+ <link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css' %}">
+
+
+<link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/flaticon.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/remixicon.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/odometer.min.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/fancybox.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/aos.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/dark-theme.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
+<title>Apex Trust Green Bank - Money Transfer & Online banking </title>
+<link rel="icon" href="{% static 'assets/img/favicon.png' %}" >
+</head>
+<body>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/624e8ea8c72df874911da036/1g01dqhb7';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+<div class="loader js-preloader">
+<div></div>
+<div></div>
+<div></div>
+</div>
+
+
+
+<div class="switch-theme-mode">
+<label id="switch" class="switch">
+<input type="checkbox" onchange="toggleTheme()" id="slider">
+<span class="slider round"></span>
+</label>
+</div>
+
+
+<div class="page-wrapper">
+
+<header class="header-wrap style2">
+<!-- Smartsupp Live Chat script -->
+
+<div class="header-top">
+<button type="button" class="close-sidebar">
+<i class="ri-close-fill"></i>
+</button>
+<div class="container">
+<div class="row align-items-center">
+<div class="col-lg-8 col-md-12">
+<div class="header-top-left">
+<ul class="contact-info list-style">
+<li><i class="flaticon-call"></i> <a href="tel:+1 (720) 583-4491">+1 (720) 583-4491</a></li>
+ <li><i class="flaticon-email-1"></i><a href = "mailto: customercare@apexgreentrust.com">customercare@apexgreentrust</a></li>
+<li><i class="flaticon-pin"></i><p>742 Main Street, North Oxford MA 1537</p></li>
+</ul>
+</div>
+</div>
+<div class="col-lg-4 col-md-12">
+<div class="header-top-right">
+<ul class="header-top-menu list-style">
+<li><a href="">Support</a></li>
+<li><a href="">Help</a></li>
+</ul>
+<div class="select-lang">
+<i class="ri-global-line"></i>
+<div class="navbar-option-item navbar-language dropdown language-option">
+<button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<span class="lang-name"></span>
+</button>
+<div class="dropdown-menu language-dropdown-menu">
+<a class="dropdown-item" href="#">
+<img src="{% static 'assets/img/uk.png' %}" alt="flag">
+English
+</a>
+<a class="dropdown-item" href="#">
+<img src="{% static 'assets/img/china.png' %}" alt="flag">
+简体中文
+</a>
+<a class="dropdown-item" href="#">
+<img src="{% static 'assets/img/uae.png' %}" alt="flag">
+العربيّة
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="header-bottom">
+<div class="container">
+<nav class="navbar navbar-expand-md navbar-light">
+<a class="navbar-brand" href="{% url 'home' %}">
+<img  src="{% static 'assets/img/logo.png' %}" alt="logo">
+</a>
+<div class="collapse navbar-collapse main-menu-wrap" id="navbarSupportedContent">
+<div class="menu-close xl-none">
+<a href="javascript:void(0)"> <i class="ri-close-line"></i></a>
+</div>
+<ul class="navbar-nav ms-auto">
+<li class="nav-item">
+<a href="{% url 'about' %}" class="nav-link">
+About Us
+</a>
+<li class="nav-item">
+<a href="{% url 'contact' %}" class="nav-link">Contact Us</a>
+</li>
+<li class="nav-item xl-none">
+<a href="{% url 'login' %}" class="btn style1">Login</a>
+ <a href="{% url 'register' %}" class="btn style1">Register Now</a>
+</li>
+</ul>
+ <div class="others-options  lg-none">
+<div class="searchbox">
+<input type="search" placeholder="Search">
+<button type="button">
+<i class="flaticon-search"></i>
+</button>
+</div>
+<div class="header-btn lg-none">
+<a href="{% url 'register' %}" class="btn style1">Register Now</a>
+</div>
+</div>
+</div>
+</nav>
+<div class="mobile-bar-wrap">
+<div class="mobile-sidebar">
+<i class="ri-menu-4-line"></i>
+</div>
+<button class="searchbtn xl-none" type="button">
+<i class="flaticon-search"></i>
+</button>
+<div class="mobile-menu xl-none">
+<a href="javascript:void(0)"><i class="ri-menu-line"></i></a>
+</div>
+</div>
+</div>
+<div class="search-area">
+<div class="container">
+<form action="#">
+<div class="form-group">
+<input type="search" placeholder="Search Here" autofocus>
+</div>
+</form>
+<button type="button" class="close-searchbox">
+<i class="ri-close-line"></i>
+</button>
+</div>
+</div>
+</div>
+</header>
+
+
+
+ {% block content%}
+ {% endblock %}
+
+
+
+<footer class="footer-wrap bg-stratos">
+<img src="{% static 'assets/img/footer-shape-3.png' %}" alt="Image" class="footer-shape-three">
+<div class="container">
+<img src="{% static 'assets/img/footer-shape-1.png' %}" alt="Image" class="footer-shape-one">
+<img src="{% static 'assets/img/footer-shape-2.png' %}" alt="Image" class="footer-shape-two">
+<div class="row pt-100 pb-75">
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+<div class="footer-widget">
+<a href="{% url 'home' %}" class="footer-logo">
+<img src="{% static 'assets/img/logo.png' %}" alt="Image">
+</a>
+<p class="comp-desc">
+Apex trust online banking is designed to be convenient, saving you time and letting you do your banking on your own schedule rather than only during the hours your local bank branch is open. Almost anything you can do at a traditional bank or credit union location you can accomplish online, starting with opening an account!
+</p>
+<div class="social-link">
+<ul class="social-profile list-style style1">
+<li>
+<a target="_blank" href="https://facebook.com">
+<i class="ri-facebook-fill"></i>
+</a>
+</li>
+<li>
+<a target="_blank" href="https://twitter.com">
+<i class="ri-twitter-fill"></i>
+</a>
+</li>
+<li>
+<a target="_blank" href="https://linkedin.com">
+<i class="ri-linkedin-fill"></i>
+</a>
+</li>
+<li>
+<a target="_blank" href="https://instagram.com">
+<i class="ri-pinterest-fill"></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+<div class="footer-widget">
+<h3 class="footer-widget-title">Our Company</h3>
+<ul class="footer-menu list-style">
+<li>
+<a href="">
+<i class="flaticon-next"></i>
+Company &amp; Team
+</a>
+</li>
+<li>
+<a href="">
+<i class="flaticon-next"></i>
+Our Services
+</a>
+</li>
+<li>
+<a href="">
+<i class="flaticon-next"></i>
+News &amp; Blog
+</a>
+</li>
+<li>
+<a href="">
+<i class="flaticon-next"></i>
+Pricing Plan
+</a>
+</li>
+<li>
+<a href="">
+<i class="flaticon-next"></i>
+Contact Us
+</a>
+</li>
+<li>
+<a href="">
+<i class="flaticon-next"></i>
+Privacy Policy
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-xl-2 col-lg-2 col-md-6 col-sm-6">
+<div class="footer-widget">
+<h3 class="footer-widget-title">Products</h3>
+<ul class="footer-menu list-style">
+<li>
+<a href="">
+<i class="flaticon-next"></i>
+Online Payment
+</a>
+</li>
+<li>
+<a href="">
+<i class="flaticon-next"></i>
+Deposit Scheme
+</a>
+</li>
+<li>
+<a href="">
+<i class="flaticon-next"></i>
+Online Shopping
+</a>
+</li>
+<li>
+<a href="">
+<i class="flaticon-next"></i>
+Master Card
+</a>
+</li>
+<li>
+<a href="">
+<i class="flaticon-next"></i>
+Receive Money
+</a>
+</li>
+<li>
+<a href="">
+<i class="flaticon-next"></i>
+Affiliate Program
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+<div class="footer-widget">
+<h3 class="footer-widget-title">Subscribe</h3>
+<p class="newsletter-text">Kindly provide your email address to subscribe to our news letter</p>
+<form action="#" class="newsletter-form">
+<input type="email" placeholder="Your Email">
+<button type="button">Subscribe</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="copyright-text">
+<p> <i class="ri-copyright-line"></i><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear())</script> Green Trust Bank. All Rights Reserved</p>
+</div>
+</footer>
+
+</div>
+
+
+<a href="javascript:void(0)" class="back-to-top bounce"><i class="ri-arrow-up-s-line"></i></a>
+
+
+<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+<script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'assets/js/form-validator.min.js' %}"></script>
+<script src="{% static 'assets/js/contact-form-script.js' %}"></script>
+<script src="{% static 'assets/js/aos.js' %}"></script>
+<script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'assets/js/odometer.min.js' %}"></script>
+<script src="{% static 'assets/js/fancybox.js' %}"></script>
+<script src="{% static 'assets/js/jquery.appear.js' %}"></script>
+<script src="{% static 'assets/js/tweenmax.min.js' %}"></script>
+<script src="{% static 'assets/js/main.js' %}"></script>
+</body>
+</html>

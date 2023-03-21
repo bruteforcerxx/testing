@@ -1,0 +1,164 @@
+{% extends '_dash_header.html' %}
+{% load static %}
+
+{% block content %}
+ <div class="sidebar">
+    <div class="brand-logo"><a class="full-logo" href=""><img src="{% static './salford/logo.png' %}" alt="" width="40"></a></div>
+    <div class="menu">
+        <ul>
+            <li><a href="{% url 'transactions' %}">
+                    <span><i class="ri-time-line"></i></span>
+                    <span class="nav-text">Transaction history</span>
+                </a>
+            </li>
+            <li><a href="{% url 'dash' %}">
+                    <span><i class="ri-wallet-line"></i></span>
+                    <span class="nav-text">Dash board</span>
+                </a>
+            </li>
+            <li><a href="{% url 'send' %}">
+                    <span><i class="ri-send-plane-line"></i></span>
+                    <span class="nav-text">Send Money</span>
+                </a>
+            </li>
+              <li><a href="{% url 'loan' %}">
+                    <span><i class="ri-refund-2-line"></i></span>
+                    <span class="nav-text">Loan</span>
+                </a>
+            </li>
+
+            <li><a href="{% url 'profile' %}">
+                    <span><i class="ri-profile-line"></i></span>
+                    <span class="nav-text">Settings</span>
+                </a>
+            </li>
+            <li ><a href="{% url 'login' %}">
+                    <span><i class="ri-logout-circle-line"></i></span>
+                    <span class="nav-text">Signout</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+   <div class="content-body">
+      <div class="container">
+         <div class="page-title">
+            <div class="row align-items-center justify-content-between">
+               <div class="col-xl-4">
+                  <div class="page-title-content">
+                     <h3>Receive Loan</h3>
+                     <p class="mb-2">Hello {{fullname}}</p>
+                  </div>
+               </div>
+               <div class="col-auto">
+                  <div class="breadcrumbs">
+                     <a href=" ">
+                        Home
+                     </a>
+                     <span><i class="ri-arrow-right-s-line"></i></span><a href=" ">Send Money</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+             <div class="col-xl-5 col-md-6" style="min-width: 100%">
+                    <div class="mini-logo text-center my-3">
+                        <a href="{% url 'home' %}"><img src="{% static './salford/logo.png' %}" height="70" alt=""></a>
+                        <h2 class="card-title mt-7">Loan Application</h2>
+                    </div>
+                    <div class="auth-form card">
+                        <div class="card-body">
+                            <div class="row">
+                                <p class="text-center mb-3">Complete the form below for your loan application</p>
+                                <p class="text-center mb-3" style="color: red">{{message}}</p>
+                            </div>
+                            <form action="{% url 'loan' %}" class="row g-3" method="post">
+                                {% csrf_token %}
+                                 <div class="col-12">
+                                    <label class="form-label">Loan Category</label>
+                                    <select class="form-select" name="cat" required>
+                                        <option value="Personal loan">Personal loan ($100 - $2,000)</option>
+                                        <option value="Car loan">Car loan ($2,000 - $40,000)</option>
+                                        <option value="Mortgage loan">Mortgage ($40,00 - $500,000)</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Loan Amount</label>
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" placeholder="$00.00" name="amount" required>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Reason for loan</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Carefully explain your reason for this loan application" name="reason" required>
+                                    </div>
+                                </div>
+
+                                 <div class="col-12">
+                                    <label class="form-label">What is your average monthly income?</label>
+                                    <select class="form-select" name="loan-type" required>
+                                        <option value="$0 - $1,000">Between $0 - $1,000</option>
+                                        <option value="$1,000 - $2,500">Between $1,000 - $2,500</option>
+                                        <option value="$2,500 - $5,000">Between $2,500 - $5,000</option>
+                                        <option value="$5,000 - $7,500">Between $5,000 - $7,500</option>
+                                        <option value="$7,500 - $10,000">Between $7,500 - $10,000</option>
+                                        <option value="$10,000+">$10,000+</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Next of Kin</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="" name="bank" required>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Father's name</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="" name="bank" required>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Mother's name</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="" name="bank" required>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Current residential address</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="" name="bank" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <label class="form-label">Transaction pin</label>
+                                    <div class="input-group">
+                                        <input type="password" class="form-control" placeholder="" name="pin" required>
+                                    </div>
+                                </div>
+
+                                <div class="alert-text">
+                                    <small>The data you have provided will be submitted, reviewed and verified before your
+                                        loan issuance can be approved.</small>
+                                </div>
+                                <div class="text-center mt-4">
+                                    <button type="submit" class="btn btn-primary btn-block">Confirm transaction</button>
+                                </div>
+                            </form>
+                            <div class="new-account mt-3">
+                                <p>Forgot pin? <a class="text-primary" href="mailto:office@webstercitiunion.com">Contact support</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+{% endblock %}
+
+
+
+

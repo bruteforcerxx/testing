@@ -1,0 +1,637 @@
+<!DOCTYPE html> 
+{% load static %}
+<html lang="en">
+
+<head>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="modinatheme">
+    <!-- ======== Page title ============ -->
+    <title>WebsterCitiUnion - Your number one solution for internet banking</title>
+    <!-- ========== Favicon Icon ========== -->
+    <link rel="shortcut icon" href="{% static './salford/logo.png' %}">
+    <!-- ===========  All Stylesheet ================= -->
+    <!--  Icon css plugins -->
+    <link rel="stylesheet" href="{% static 'assets/css/icons.css' %}">
+    <!--  animate css plugins -->
+    <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
+    <!--  slick css plugins -->
+    <link rel="stylesheet" href="{% static 'assets/css/slick.css' %}">
+    <!--  magnific-popup css plugins -->
+    <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
+    <!-- metis menu css file -->
+    <link rel="stylesheet" href="{% static 'assets/css/metismenu.css' %}">
+    <!--  Bootstrap css plugins -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <!--  main style css file -->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <!-- template main style css file -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="online banking, money, transfer, internet, bankapp" />
+	<meta name="author" content="" />
+	<meta name="robots" content="" />
+	<meta name="description" content="WebsterCitiUnion - Your number one solution for internet banking" />
+	<meta property="og:title" content="WebsterCitiUnion - Your number one solution for internet banking" />
+	<meta property="og:description" content="WebsterCitiUnion - Your number one solution for internet banking" />
+	<meta property="og:image" content="{% static './salford/banner.jpeg' %}"/>
+	<meta name="format-detection" content="telephone=no">
+
+	<!-- FAVICONS ICON -->
+	<link rel="icon" href="{% static './salford/banner.jpeg' %}" type="image/x-icon" />
+	<link rel="shortcut icon" type="image/x-icon" href="{% static './salford/banner.jpeg' %}" />
+
+    
+</head>
+<!--Start of tido.to Script-->
+<script src="//code.tidio.co/jatxcylkvsfsathwxgsxdrlulibel3hs.js" async></script>
+<!--End of tido.to Script-->
+<body class="body-wrapper">    
+    <!-- preloader -->
+    <div id="preloader" class="preloader">
+        <div class="animation-preloader">
+            <div class="spinner">
+            </div>
+                <div class="txt-loading">
+                    <span data-text-preloader="W" class="letters-loading">
+                       W
+                    </span>
+                    <span data-text-preloader="C" class="letters-loading">
+                       C
+                    </span>
+                    <span data-text-preloader="U" class="letters-loading">
+                       U
+                    </span>
+                </div>
+            <p class="text-center">Loading</p>
+        </div>
+        <div class="loader">
+            <div class="row">
+                <div class="col-3 loader-section section-left">
+                    <div class="bg"></div>
+                </div>
+                <div class="col-3 loader-section section-left">
+                    <div class="bg"></div>
+                </div>
+                <div class="col-3 loader-section section-right">
+                    <div class="bg"></div>
+                </div>
+                <div class="col-3 loader-section section-right">
+                    <div class="bg"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <header class="header-1" style="background-color: #DAF7A6">
+        <div class="container" style="background-color: #DAF7A6">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-lg-2 col-sm-5 col-md-4 col-6">
+                    <div class="logo">
+                        <a href="{% url 'index' %}">
+                            <img src="{% static './salford/logo_name_white.png' %}"  alt="Salford">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-10 text-end p-lg-0 d-none d-lg-flex justify-content-between align-items-center">
+                    <div class="menu-wrap">
+                        <div class="main-menu">
+                            <ul>
+                                <li><a href="{% url ' ' %}">Home</a> </li>
+                                <li><a href="{% url 'about' %}">About</a> </li>
+                                <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><a href="{% url 'loans' %}">Loans</a></li>
+                                <li><a href="{% url 'support' %}">Support</a></li>
+                                <li><a href="{% url 'register' %}">Register</a></li>
+                                <li><a href="{% url 'login' %}">Login</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="header-right-element text-white">
+                        <a href="{% url 'login' %}">login</a>
+                        <a href="{% url 'register' %}" class="theme-btn black">get started</a>
+                    </div>
+                </div>
+                <div class="d-block d-lg-none col-sm-1 col-md-8 col-6">
+                    <div class="mobile-nav-wrap">
+                        <div id="hamburger"><i class="fal fa-bars"></i></div>
+                        <!-- mobile menu - responsive menu  -->
+                        <div class="mobile-nav">
+                            <button type="button" class="close-nav">
+                                <i class="fal fa-times-circle"></i>
+                            </button>
+                            <nav class="sidebar-nav">
+                                <ul class="metismenu" id="mobile-menu">
+                                <li><a href="{% url ' ' %}">Home</a> </li>
+                                <li><a href="{% url 'about' %}">About</a> </li>
+                                <li><a href="{% url 'contact' %}">Contact</a></li>
+                                <li><a href="{% url 'loans' %}">Loans</a></li>
+                                <li><a href="{% url 'support' %}">Support</a></li>
+                                <li><a href="{% url 'register' %}">Register</a></li>
+                                <li><a href="{% url 'login' %}">Login</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="overlay"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="hero-welcome-wrapper hero-3 fw500">
+        <div class="single-slide">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-5 col-12 text-xl-start mt-5 mt-xl-0 text-center order-2 order-xl-1">
+                        <div class="hero-mobile">
+                            <img src="{% static './images/happy.png' %}"  alt="">
+                        </div>
+                    </div>
+                    <div class="col-xl-7 ps-xl-5 text-center text-xl-start col-12 order-1 order-xl-2">
+                        <div class="hero-contents">
+                            <h1>Online banking solution for the next generation</h1>
+                            <p>Nowadays the simplest and most popular online banking solution for that saves time by speeding up your banking work apart from and also this you can do banking anytime, anywhere.</p>
+                            <a href="{% url 'register' %}" class="theme-btn black" style="background-color: green; border-color: green; margin-bottom: 10px">get started</a>
+                            <hr>
+
+                            <div class="client-feedback-wrapper">
+                                <div class="client-faces">
+                                    <div class="single-face bg-cover" style="background-image: url('assets/img/user/1.png' %}')"></div>
+                                    <div class="single-face bg-cover" style="background-image: url('assets/img/user/2.png' %}')"></div>
+                                    <div class="single-face bg-cover" style="background-image: url('assets/img/user/3.png' %}')"></div>
+                                    <div class="single-face bg-cover" style="background-image: url('assets/img/user/4.png' %}')"></div>
+                                    <div class="single-face bg-cover" style="background-image: url('assets/img/user/5.png' %}')"></div>
+                                </div>
+                                <h6>Satisfied global clients</h6>
+                                <div class="rating">
+                                    <span class="icon-star"></span> 4.5 Global rating
+                                </div>
+                                <div class="hero-arrow">
+                                    <img src="{% static 'assets/img/home3/hero-arrow.png' %}" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="strong-services-wrapper section-bg section-padding fw500">
+        <div class="container">
+            <div class="col-lg-8 ps-xl-5 pe-xl-5 col-12 offset-lg-2 text-center">
+                <div class="block-contents">
+                    <div class="section-title wow fadeInUp" data-wow-duration="1s">
+                        <h2>Strong new features for banking services</h2>
+                        <p>In mobile banking you get all kinds of modern services It helps you focus on your core business and benefit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-xl-3">
+                    <div class="strong-service-card card1">
+                        <div class="icon">
+                            <i class="icon-layer"></i>
+                        </div>
+                        <div class="service-title">
+                            <h3>Credit and debit card facilities</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-3">
+                    <div class="strong-service-card card2">
+                        <div class="icon">
+                            <i class="icon-mobile-pay"></i>
+                        </div>
+                        <div class="service-title">
+                            <h3>Pay bills & deposit cheques online</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-3">
+                    <div class="strong-service-card card3">
+                        <div class="icon">
+                            <i class="icon-cow"></i>
+                        </div>
+                        <div class="service-title">
+                            <h3>Lower your overhead fees</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-3">
+                    <div class="strong-service-card card4">
+                        <div class="icon">
+                            <i class="icon-secure"></i>
+                        </div>
+                        <div class="service-title">
+                            <h3>Privacy and secure transactions</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-block style-2 section-padding fw500">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-5 pe-xl-0">
+                    <div class="block-img">
+                        <img src="{% static './images/meeting.jpeg' %}"  style="border-radius: 1px 50px 30px;" alt="">
+                    </div>
+                </div>
+                <div class="col-xl-6 mt-5 mt-xl-0 offset-xl-1 ps-xl-5">
+                    <div class="block-contents">
+                        <div class="section-title mb-4 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+                            <h2>Taking your finances to a whole new level</h2>
+                        </div>
+                        <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">Online and mobile banking makes handling your finances easier and more convenient, but it is imperative to make sure that you are protecting your financial information.</p>
+                        <ul class="checked-list bg-checked">
+                            <li class="wow fadeInUp" data-wow-delay=".5s">Calculate input output results easily</li>
+                            <li class="wow fadeInUp" data-wow-delay=".7s">Prevent waste and increase income</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-block section-padding style-2 section-bg-2 fw500">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-5 mt-5 mt-xl-0 order-2 order-xl-1">
+                    <div class="block-contents">
+                        <div class="section-title mb-4 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+                            <h2>Clean and full intuitive user interface system</h2>
+                        </div>
+                        <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">WebsterCitiUnion Banking App interface is so simple that you can easily find out the details of any change, transaction account, expense in your account.</p>
+                        <ul class="checked-list bg-checked color-set">
+                            <li class="wow fadeInUp" data-wow-delay=".5s">This will help speed up your business</li>
+                            <li class="wow fadeInUp" data-wow-delay=".7s">Make money security and control easier</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-5 offset-xl-2 ps-xl-0 order-1 order-xl-2">
+                    <div class="block-img">
+                        <img src="{% static 'assets/img/home3/block2.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-block theme-bg section-padding fw500">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 pe-lg-0 col-12">
+                    <div class="mobile-block">
+                        <img src="{% static './images/point.png' %}" style="height: 120%; width: 120%" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0 offset-lg-1 col-12 ps-lg-5 pe-lg-5">
+                    <div class="block-contents ms-xl-3">
+                        <div class="section-title mb-4 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+                            <h2>Simple & effortless process app setup</h2>
+                        </div>
+                        <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">You can easily download the app on your mobile & open a bank account in your name with the required information.</p>
+                    </div>
+                    <div class="step-features">
+                        <div class="single-featured-item item1 wow fadeInUp" data-wow-delay=".3s">
+                            <h4>Download from the Play Store on any device</h4>
+                            <p>You can easily download the salford app from the App Store or Google Play on any device</p>
+                        </div>
+                        <div class="single-featured-item item2 wow fadeInUp" data-wow-delay=".5s">
+                            <h4>Create an account with needful information</h4>
+                            <p>Open a secure account for yourself with your name and necessary information that need</p>
+                        </div>
+                        <div class="single-featured-item item3 wow fadeInUp" data-wow-delay=".7s">
+                            <h4>Experience best banking services anytime</h4>
+                            <p>Mobile banking allows consumers to be able to access banking services from anywhere.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="package-pricing-wrapper fix section-padding">
+        <div class="container">
+            <div class="col-lg-8 col-xl-6 offset-xl-3 offset-lg-2 text-center">
+                <div class="block-contents fw500">
+                    <div class="section-title">
+                        <h2 class="wow fadeInUp">Easy and affordable Loan plans for everyone</h2>
+                        <p class="wow fadeInUp pt-4" data-wow-delay=".3s">Easy budgeting method that can help you to manage your money effectively, simply and sustainably.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pricing-toggle">
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="pills-month-tab" data-bs-toggle="pill" data-bs-target="#pills-month" type="button" role="tab" aria-controls="pills-month" aria-selected="true">Available loan plans</button>
+                    </li>
+                </ul>
+
+                <div class="pricing-arrow">
+                    <img src="{% static 'assets/img/pricing-draw.png' %}" alt="">
+                </div>
+            </div>
+
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-month" role="tabpanel" aria-labelledby="pills-month-tab">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-xl-4 col-12">
+                            <div class="single-pricing-package style-2 package1">
+                                <div class="pricing-head">
+                                    <div class="pricing-name">
+                                        <h4>Personal Loan</h4>
+                                    </div>
+                                    <div class="pricing-vale d-flex">
+                                        <h2>$<span>100- $2000</span></h2>
+                                        <p>/12 Months payment plan</p>
+                                    </div>
+                                </div>
+                                <div class="features-list">
+                                    <ul>
+                                        <li>Pay back: $10 / Month</li>
+                                        <li>5% cashback for merchants</li>
+                                        <li>No Updates Facility</li>
+                                    </ul>
+                                </div>
+                                <div class="buy-package-btn">
+                                    <a href="{% url 'login' %}" class="theme-btn second-color minimal-btn">Choose Plan</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-xl-4 col-12">
+                            <div class="single-pricing-package style-2 package2 active">
+                                <div class="package-bage wow fadeInDown" data-wow-delay=".9s" ><span>Popular</span></div>
+                                <div class="pricing-head">
+                                    <div class="pricing-name">
+                                        <h4>Car Loan</h4>
+                                    </div>
+                                    <div class="pricing-vale d-flex">
+                                        <h2>$<span>2000 - $40,000</span></h2>
+                                        <p>/5 year payment plan</p>
+                                    </div>
+                                </div>
+                                <div class="features-list">
+                                    <ul>
+                                        <li>Pay back: $40 / Month</li>
+                                        <li>20% cashback for merchants</li>
+                                        <li>Free Lifetime Updates Facility</li>
+                                    </ul>
+                                </div>
+                                <div class="buy-package-btn">
+                                    <a href="{% url 'login' %}" class="theme-btn second-color">Choose Plan</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-xl-4 col-12">
+                            <div class="single-pricing-package style-2 package3">
+                                <div class="pricing-head">
+                                    <div class="pricing-name">
+                                        <h4>Mortgage</h4>
+                                    </div>
+                                    <div class="pricing-vale d-flex">
+                                        <h2>$<span>40,000 - $500,000</span></h2>
+                                        <p>/30 Year payment plan</p>
+                                    </div>
+                                </div>
+                                <div class="features-list">
+                                    <ul>
+                                        <li>Pay back: $120 / Month</li>
+                                        <li>15% cashback for merchants</li>
+                                        <li>Free Lifetime Updates Facility</li>
+                                    </ul>
+                                </div>
+                                <div class="buy-package-btn">
+                                    <a href="{% url 'login' %}" class="theme-btn second-color minimal-btn">Choose Plan</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="faq-ask-wrapper section-padding">
+        <div class="container">
+            <div class="col-lg-8 col-xl-6 offset-xl-3 col-12 offset-lg-2 text-center">
+                <div class="block-contents fw500">
+                    <div class="section-title wow fadeInUp" data-wow-duration="1s">
+                        <h2>If you want to know anything, ask us</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row faq-ask">
+                <div class="col-lg-6 col-12">
+                    <div class="faq-accordion">
+                        <div class="accordion" id="mainaccordion">
+                            <div class="accordion-item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                              <h4 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqask1" aria-expanded="false" aria-controls="faqask1">
+                                    What can I do with Online Banking?
+                                </button>
+                              </h4>
+                              <div id="faqask1" class="accordion-collapse collapse show" data-bs-parent="#mainaccordion">
+                                <div class="accordion-body">
+                                    You can view account balances and transaction history, and transfer money between CSB accounts. You can online bill Payment that allows you to pay your bills quickly and easily!
+                                </div>
+                              </div>
+                            </div>
+                            
+                            <div class="accordion-item wow fadeInUp" data-wow-duration="1.1s" data-wow-delay=".6s">
+                              <h4 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqask2" aria-expanded="true" aria-controls="faqask2">
+                                    When do I have access to use Online Banking?
+                                </button>
+                              </h4>
+                              <div id="faqask2" class="accordion-collapse collapse" data-bs-parent="#mainaccordion">
+                                <div class="accordion-body">
+                                    You can access your account on the go, anywhere and anytime, all round the world!
+                                </div>
+                              </div>
+                            </div>
+    
+                            <div class="accordion-item wow fadeInUp" data-wow-duration="1.1s" data-wow-delay=".9s">
+                              <h4 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqask3" aria-expanded="false" aria-controls="faqask3">
+                                    How current is my banking information?
+                                </button>
+                              </h4>
+                              <div id="faqask3" class="accordion-collapse collapse" data-bs-parent="#mainaccordion">
+                                <div class="accordion-body">
+                                    Your transaction history and information are updated regularly every second to give you up-to-date
+                                    information on your assets
+                                </div>
+                              </div>
+                            </div>
+    
+                        </div>                      
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="faq-accordion">
+                        <div class="accordion" id="faqtwo">
+                            <div class="accordion-item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                              <h4 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqask11" aria-expanded="true" aria-controls="faqask11">
+                                    What happens if I forget or lose my password?
+                                </button>
+                              </h4>
+                              <div id="faqask11" class="accordion-collapse collapse" data-bs-parent="#faqtwo">
+                                <div class="accordion-body">
+                                    You can always contact our support team incase you loose or forget your password
+                                </div>
+                              </div>
+                            </div>
+                            
+                            <div class="accordion-item wow fadeInUp" data-wow-duration="1.1s" data-wow-delay=".6s">
+                              <h4 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqask22" aria-expanded="true" aria-controls="faqask22">
+                                    Is my mobile device secure to use?
+                                </button>
+                              </h4>
+                              <div id="faqask22" class="accordion-collapse collapse" data-bs-parent="#faqtwo">
+                                <div class="accordion-body">
+                                    Our mobile services are a 100% secure to use, your assets are always safe with us.
+                               </div>
+                              </div>
+                            </div>
+    
+                            <div class="accordion-item wow fadeInUp" data-wow-duration="1.1s" data-wow-delay=".9s">
+                              <h4 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqask33" aria-expanded="false" aria-controls="faqask33">
+                                    Can I change my password on my banking app?
+                                </button>
+                              </h4>
+                              <div id="faqask33" class="accordion-collapse collapse" data-bs-parent="#faqtwo">
+                                <div class="accordion-body">
+                                    Yes you can always change your password if you suspect that your account has been
+                                    compromised.
+                               </div>
+                              </div>
+                            </div>
+    
+                        </div>                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-banner-wrapper fw500">
+        <div class="container">
+            <div class="cta-banner-white-wrap">
+                <div class="cta-banner style-3 text-white">
+                    <div class="row">
+                        <div class="col-xl-6 text-center mt-5 mt-xl-0 order-2 order-xl-1">
+                            <div class="cta-mobile">
+                                <img src="{% static 'assets/img/cta-mobile.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="text-center text-xl-start col-xl-6 order-1 order-xl-2">
+                            <div class="cta-contents pe-lg-5">
+                                <h2 class="wow fadeInUp">Pay your bills utility with just one tap</h2>
+                                <p class="wow fadeInUp" data-wow-delay=".3s">Easily pay your utility bills seamlessly with just on tap where ever and when ever.</p>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-wrapper footer-2">
+        <div class="footer-widgets-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                        <div class="single-footer-widget wow fadeInLeft">
+                            <div class="about-us-widget">
+                                <a href="{% url 'index' %}" class="footer-logo d-block">
+                                    <img src="{% static './salford/logo_name.png' %}" alt="xmoze">
+                                </a>
+                                <p>WebsterCitiUnion helps millions of people get the best online banking experince all round the world. We strife to make internet banking easy, safe and secure
+                                    for your day to day use.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-3 offset-xl-1 col-md-6 col-12">
+                        <div class="single-footer-widget wow fadeInLeft" data-wow-delay=".2s">
+                            <div class="widget-title">
+                                <h5>Company</h5>
+                            </div>
+                            <ul>
+                                <li><a href="{% url 'about' %}">About WebsterCitiUnion</a></li>
+                                <li><a href="{% url 'contact' %}">Contact & support</a></li>
+                                <li><a href="{% url 'loans' %}">Loans</a></li>
+                                <li><a href="{% url 'support' %}">Support</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-2 col-lg-3 offset-xl-1 col-md-6 col-12">
+                        <div class="single-footer-widget wow fadeInLeft" data-wow-delay=".2s">
+                            <div class="widget-title">
+                                <h5>Contact information</h5>
+                            </div>
+                            <ul>
+                                <li><a href="{% url 'about' %}">Phone: +1 (504) 579-4234</a></li>
+                                <li><a href="{% url 'contact' %}">Address: 1894 Ward Hill Rd
+                                    Pennington Gap, Virginia(VA), 24277 </a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom-wrapper">
+            <div class="container">
+                <div class="footer-bottom-content d-md-flex justify-content-between">
+                    <div class="site-copyright wow fadeInUp" data-wow-delay=".2" data-wow-duration="1s">
+                        <p>&copy; 2023 <a href="{% url '#">Webster Citi Union</a> All Rights Reserved.</p>
+                    </div>
+                    <div class="social-links mt-4 mt-md-0 gray-bg wow fadeInUp" data-wow-delay=".5" data-wow-duration="1s">
+                        <a href="{% url '#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="{% url '#"><i class="fab fa-twitter"></i></a>
+                        <a href="{% url '#"><i class="fab fa-instagram"></i></a>
+                        <a href="{% url '#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--  ALl JS Plugins
+    ====================================== -->
+    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/js/modernizr.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.easing.js' %}"></script>
+    <script src="{% static 'assets/js/popper.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/js/imageload.min.js' %}"></script>
+    <script src="{% static 'assets/js/scrollUp.min.js' %}"></script>
+    <script src="{% static 'assets/js/slick.min.js' %}"></script>
+    <script src="{% static 'assets/js/magnific-popup.min.js' %}"></script>
+    <script src="{% static 'assets/js/wow.min.js' %}"></script>
+    <script src="{% static 'assets/js/metismenu.js' %}"></script>
+    <script src="{% static 'assets/js/active.js' %}"></script>
+</body>
+
+</html>

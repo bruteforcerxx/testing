@@ -1,0 +1,158 @@
+{% extends '_dash_header.html' %}
+{% load static %}
+
+{% block content %}
+ <div class="sidebar">
+    <div class="brand-logo"><a class="full-logo" href=""><img src="{% static './salford/logo.png' %}" alt="" width="40"></a></div>
+    <div class="menu">
+        <ul>
+            <li><a href="{% url 'transactions' %}">
+                    <span><i class="ri-time-line"></i></span>
+                    <span class="nav-text">Transaction history</span>
+                </a>
+            </li>
+            <li><a href="{% url 'dash' %}">
+                    <span><i class="ri-wallet-line"></i></span>
+                    <span class="nav-text">Dash board</span>
+                </a>
+            </li>
+            <li><a href="{% url 'send' %}">
+                    <span><i class="ri-send-plane-line"></i></span>
+                    <span class="nav-text">Send Money</span>
+                </a>
+            </li>
+              <li><a href="{% url 'loan' %}">
+                    <span><i class="ri-refund-2-line"></i></span>
+                    <span class="nav-text">Loan</span>
+                </a>
+            </li>
+
+            <li><a href="{% url 'profile' %}">
+                    <span><i class="ri-profile-line"></i></span>
+                    <span class="nav-text">Settings</span>
+                </a>
+            </li>
+            <li ><a href="{% url 'login' %}">
+                    <span><i class="ri-logout-circle-line"></i></span>
+                    <span class="nav-text">Signout</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+    <div class="content-body">
+        <div class="container">
+            <div class="page-title">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-xl-4">
+                        <div class="page-title-content">
+                            <h3>Profile</h3>
+                            <p class="mb-2">{{fullname}}, welcome to your profile page</p>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="breadcrumbs">
+                            <a href="#">
+                                Home
+                                <!-- -->
+                            </a>
+                            <span><i> / </i></span><a href="#">Profile</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xxl-6 col-xl-6 col-lg-6">
+                    <div class="card welcome-profile">
+                        <div class="card-body">
+                            <img src="./images/profile/3.png" alt="">
+                            <h4>Welcome, {{fullname}}!</h4>
+                            <p>Looks like you are not verified yet. Verify yourself to use the full potential of
+                                WebsterCitiUnion.</p>
+                            <ul>
+                                <li><a href="#"><span class="verified"></span>Verify
+                                        account</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xxl-8 col-xl-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">VERIFY &amp; UPGRADE </h4>
+                        </div>
+                        <div class="card-body">
+                            <h5>Account Status :<span class="text-warning">Pending <i
+                                        class="icofont-warning"></i></span></h5>
+                            <p>Your account is unverified. Get verified to increase your transaction limit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xxl-8 col-xl-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Account information</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                                    <div class="user-info">
+                                        <span>ACCOUNT NUMBER</span>
+                                        <h4>{{account_number}}</h4>
+                                    </div>
+                            </div>
+                                      <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                                    <div class="user-info">
+                                        <span>ACCOUNT TYPE</span>
+                                        <h4>{{account_type}}</h4>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xxl-12">
+                    <div class="card">
+                        <div class="card-header flex-row">
+                            <h4 class="card-title">Personal Information </h4>
+                        </div>
+                        <div class="card-body">
+                            <form class="row">
+                                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                                    <div class="user-info">
+                                        <span>EMAIL ADDRESS</span>
+                                        <h4>{{email}}</h4>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                                    <div class="user-info">
+                                        <span>PHONE NUMBER</span>
+                                        <h4>{{mobile}}</h4>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                                    <div class="user-info">
+                                        <span>COUNTRY OF RESIDENCE</span>
+                                        <h4>{{country}}</h4>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                                    <div class="user-info">
+                                        <span>JOINED SINCE</span>
+                                        <h4>{{date}}</h4>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                                    <div class="user-info">
+                                        <span>TYPE</span>
+                                        <h4>Personal</h4>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

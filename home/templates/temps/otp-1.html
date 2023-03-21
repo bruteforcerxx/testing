@@ -1,0 +1,54 @@
+{% extends '_dash_header.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<div id="main-wrapper">
+
+    <div class="authincation section-padding">
+        <div class="container h-100">
+            <div class="row justify-content-center h-100 align-items-center">
+                <div class="col-xl-5 col-md-6">
+                    <div class="mini-logo text-center my-3">
+                        <a href="./index.html"><img src="./images/logo.png" alt=""></a>
+                        <h4 class="card-title mt-5">2-Step Verification</h4>
+                    </div>
+                    <div class="auth-form card">
+                        <div class="card-body">
+                            <p class="text-center mb-3">Please provide your AUC token code .</p>
+                            {% if type == 'invalid' %}
+                            <p class="text-center mb-3" style="color: red">{{message}}</p>
+                            {% else %}
+                            <p class="text-center mb-3" style="color: green">{{message}}</p>
+                            {% endif %}
+
+                            <form action="{% url 'otp' %}" class="row g-3" method="post">
+                                 {% csrf_token %}
+                                  <div class="col-12">
+                                      <label class="form-label">AUC token</label>
+                                      <div class="input-group">
+                                          <input type="text" class="form-control" placeholder="" name="token" required>
+                                      </div>
+                                </div>
+                                <div class="alert-text">
+                                    <small>Security is critical in Apex trust bank. to help keep your account safe, you are required
+                                        to provide an AUC token to continue with your transaction.</small>
+                                </div>
+                                <div class="text-center mt-4">
+                                    <button type="submit" class="btn btn-primary btn-block">Verify</button>
+                                </div>
+                            </form>
+                            <div class="new-account mt-3">
+                                <p>Don't get code? <a class="text-primary" href="{% url 'resend_otp' %}">Resend</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

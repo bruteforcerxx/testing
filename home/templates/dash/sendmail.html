@@ -1,0 +1,33 @@
+{% extends '_dash_header.html' %}
+{% load static %}
+
+{% block content %}
+
+         <div class="row">
+            <div class="col-xxl-6 col-xl-6 col-lg-6">
+               <div class="card">
+                  <div class="card-header">
+                     <center>
+                     <label class="card-title" style="color: green">An email has been sent to olumike@gmail.com, please check your
+                        inbox for confirmation </label>
+                        </center>
+                  </div>
+                  <div class="card-body">
+                     <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                           <center>
+                           <img src="https://img.icons8.com/fluency/144/000000/checked-2.png"/>
+                           </center>
+                        </div>
+                        <div class="text-center mt-4">
+                           <a href="{% url 'dash' %}"><button class="btn btn-primary btn-block">Back to profile</button></a>
+                        </div>
+                        <div class="text-center mt-4">
+                           <p>Didn't receive and email? <a class="text-primary" href="">send again</a></p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+{% endblock %}

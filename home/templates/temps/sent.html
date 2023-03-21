@@ -1,0 +1,68 @@
+{% extends '_dash_header.html' %}
+{% load static %}
+
+{% block content %}
+ <div class="sidebar">
+    <div class="brand-logo"><a class="full-logo" href=""><img src="{% static './salford/logo.png' %}" alt="" width="40"></a></div>
+    <div class="menu">
+        <ul>
+            <li><a href="{% url 'transactions' %}">
+                    <span><i class="ri-time-line"></i></span>
+                    <span class="nav-text">Transaction history</span>
+                </a>
+            </li>
+            <li><a href="{% url 'dash' %}">
+                    <span><i class="ri-wallet-line"></i></span>
+                    <span class="nav-text">Dash board</span>
+                </a>
+            </li>
+            <li><a href="{% url 'send' %}">
+                    <span><i class="ri-secure-payment-line"></i></span>
+                    <span class="nav-text">Send Money</span>
+                </a>
+            </li>
+
+            <li><a href="{% url 'profile' %}">
+                    <span><i class="ri-profile-line"></i></span>
+                    <span class="nav-text">Settings</span>
+                </a>
+            </li>
+            <li ><a href="{% url 'login' %}">
+                    <span><i class="ri-logout-circle-line"></i></span>
+                    <span class="nav-text">Signout</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+         <div class="row">
+            <div class="col-xxl-6 col-xl-6 col-lg-6">
+               <div class="card">
+                  <div class="card-header">
+                     <center>
+                     <h4 class="card-title" style="color: green">Money sent successfully! Awaiting approval.</h4>
+                        </center>
+                  </div>
+                  <div class="card-body">
+                     <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                           <center>
+                           <img src="https://img.icons8.com/fluency/144/000000/checked-2.png"/>
+                           </center>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                           <div class="balance-stats active">
+                              <p>Amount</p>
+                              <h2 style="color: white">${{amount}} to {{account_num}}</h2>
+                           </div>
+                        </div>
+
+                        <div class="text-center mt-4">
+                           <a href="{% url 'dash' %}"><button class="btn btn-primary btn-block">Back to dashboard</button></a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+{% endblock %}

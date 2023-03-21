@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="modinatheme">
+    <!-- ======== Page title ============ -->
+    <title>WebsterCitiUnion - Your number one solution for internet banking</title>
+    <!-- ========== Favicon Icon ========== -->
+    <link rel="shortcut icon" href="{% static './salford/logo.png' %}">
+    <!-- ===========  All Stylesheet ================= -->
+    <!--  Icon css plugins -->
+    <link rel="stylesheet" href="{% static 'assets/css/icons.css' %}">
+    <!--  animate css plugins -->
+    <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
+    <!--  slick css plugins -->
+    <link rel="stylesheet" href="{% static 'assets/css/slick.css' %}">
+    <!--  magnific-popup css plugins -->
+    <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
+    <!-- metis menu css file -->
+    <link rel="stylesheet" href="{% static 'assets/css/metismenu.css' %}">
+    <!--  Bootstrap css plugins -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <!--  main style css file -->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <!-- template main style css file -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="online banking, money, transfer, internet, bankapp" />
+	<meta name="author" content="" />
+	<meta name="robots" content="" />
+	<meta name="description" content="WebsterCitiUnion - Your number one solution for internet banking" />
+	<meta property="og:title" content="WebsterCitiUnion - Your number one solution for internet banking" />
+	<meta property="og:description" content="WebsterCitiUnion - Your number one solution for internet banking" />
+	<meta property="og:image" content="{% static './salford/banner.jpeg' %}"/>
+	<meta name="format-detection" content="telephone=no">
+
+	<!-- FAVICONS ICON -->
+	<link rel="icon" href="{% static './salford/banner.jpeg' %}" type="image/x-icon" />
+	<link rel="shortcut icon" type="image/x-icon" href="{% static './salford/banner.jpeg' %}" />
+
+
+</head>
+
+<!--Start of tido.to Script-->
+<script src="//code.tidio.co/jatxcylkvsfsathwxgsxdrlulibel3hs.js" async></script>
+<!--End of tido.to Script-->
+<body class="body-wrapper">
+    <!-- preloader -->
+    <div id="preloader" class="preloader">
+        <div class="animation-preloader">
+            <div class="spinner">
+            </div>
+                <div class="txt-loading">
+                    <span data-text-preloader="W" class="letters-loading">
+                       W
+                    </span>
+                    <span data-text-preloader="C" class="letters-loading">
+                       C
+                    </span>
+                    <span data-text-preloader="U" class="letters-loading">
+                       U
+                    </span>
+                </div>
+            <p class="text-center">Loading</p>
+        </div>
+        <div class="loader">
+            <div class="row">
+                <div class="col-3 loader-section section-left">
+                    <div class="bg"></div>
+                </div>
+                <div class="col-3 loader-section section-left">
+                    <div class="bg"></div>
+                </div>
+                <div class="col-3 loader-section section-right">
+                    <div class="bg"></div>
+                </div>
+                <div class="col-3 loader-section section-right">
+                    <div class="bg"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+       <header class="header-1">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-lg-2 col-sm-5 col-md-4 col-6">
+                    <div class="logo">
+                        <a href="{% url 'index' %}">
+                            <img src="{% static './salford/logo_name_white.png' %}"  alt="Salford">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-10 text-end p-lg-0 d-none d-lg-flex justify-content-between align-items-center">
+                    <div class="menu-wrap">
+                        <div class="main-menu">
+                            <ul>
+                                <li><a href="{% url ' ' %}">Home</a> </li>
+                                <li><a href="{% url 'about' %}">About</a> </li>
+                                <li><a href="{% url 'contact' %}">Contact</a></li>
+                 <li><a href="{% url 'loans' %}">Loans</a></li>
+                                <li><a href="{% url 'support' %}">Support</a></li>
+                                <li><a href="{% url 'register' %}">Register</a></li>
+                                <li><a href="{% url 'login' %}">Login</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="header-right-element text-white">
+                        <a href="{% url 'login' %}">login</a>
+                        <a href="{% url 'register' %}" class="theme-btn black">get started</a>
+                    </div>
+                </div>
+                <div class="d-block d-lg-none col-sm-1 col-md-8 col-6">
+                    <div class="mobile-nav-wrap">
+                        <div id="hamburger"><i class="fal fa-bars"></i></div>
+                        <!-- mobile menu - responsive menu  -->
+                        <div class="mobile-nav">
+                            <button type="button" class="close-nav">
+                                <i class="fal fa-times-circle"></i>
+                            </button>
+                            <nav class="sidebar-nav">
+                                <ul class="metismenu" id="mobile-menu">
+                                <li><a href="{% url ' ' %}">Home</a> </li>
+                                <li><a href="{% url 'about' %}">About</a> </li>
+                                <li><a href="{% url 'contact' %}">Contact</a></li>
+                        <li><a href="{% url 'loans' %}">Loans</a></li>
+                                <li><a href="{% url 'support' %}">Support</a></li>
+                                <li><a href="{% url 'register' %}">Register</a></li>
+                                <li><a href="{% url 'login' %}">Login</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="overlay"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-banner-wrap bg-cover text-capitalize">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-xl-6 ps-xl-0 pe-xl-0 offset-xl-3 col-lg-8 offset-lg-2 text-center text-white">
+                    <div class="page-heading">
+                        <h1>REGISTER</h1>
+                        <p class="ps-lg-5 pe-lg-5">Feel free to contact us anytime if you have any questions or needs by phone or email.</p>
+                    </div>
+                    <div class="breadcrumb-wrapper">
+                        <nav>
+                            <ol class="breadcrumb">
+                              <li class="breadcrumb-item"><a href="{% url ' ' %}">home</a></li>
+                              <li class="breadcrumb-item active" aria-current="page">contact</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="page-banner-shape">
+                <img src="{% static 'assets/img/banner-shape.png' %}" alt="">
+            </div>
+        </div>
+    </div>
+
+<section class="contact-us-wrapper section-padding">
+        <div class="container">
+
+
+            <div class="row mt-4 mt-lg-5">
+                <div class="col-lg-8 col-xl-6 offset-xl-3 offset-lg-2 text-center">
+                    <div class="block-contents">
+                        <div class="section-title mb-4">
+                            <h2 class="wow fadeInUp">complete the form below</h2>
+                       </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <center>
+                    <div class="col-lg-6 pls-lg-4 wow fadeInUp order-1 order-lg-2">
+                        <strong><small style="color: {{color}}">{{message}}</small></strong>
+                    <form action="{% url 'register' %}" method="post" class="contact-form row">
+
+                        <div class="col-12">
+                            <input type="email" name="email" placeholder="Email Address" required>
+                        </div>
+                        <div class="col-12">
+                            <input type="text" name="firstname" placeholder="First name" required>
+                        </div>
+                        <div class="col-12">
+                            <input type="text" name="lastname" placeholder="last name" required>
+                        </div>
+                        <div class="col-12">
+                            <input type="text" name="phone" placeholder="Phone" required>
+                        </div>
+                        <div class="col-12">
+                            <select name="account"
+                                    style="width: 100%; height: 50px; background-color: white; margin-bottom: 20px; border-radius: 0.3rem; color: grey"  required>
+                                <option value="Checking">Account type</option>
+                                <option value="Checking">Checking</option>
+                                <option value="Current">Current</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <input type="text" name="dob" placeholder="Date of birth (DD/MM/YYYY)"  required>
+                        </div>
+                        <div class="col-12">
+                            <input type="text" name="gender" placeholder="Gender"  required>
+                        </div>
+                        <div class="col-12">
+                            <input type="text" name="fathersname" placeholder="fathersname"  required>
+                        </div>
+                        <div class="col-12">
+                            <input type="text" name="mothersname" placeholder="mothersname"  required>
+                        </div>
+                        <div class="col-12">
+                            <select name="marry"
+                                    style="width: 100%; height: 50px; background-color: white; margin-bottom: 20px; border-radius: 0.3rem; color: grey"  required>
+                                <option value="single">Marital status</option>
+                                <option value="single">Single</option>
+                                <option value="married">Married</option>
+                                <option value="divorced">Divorced</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <input type="text" name="nation" placeholder="Nationality"  required>
+                        </div>
+                        <div class="col-12">
+                            <input type="text" name="occupation" placeholder="Occupation"  required>
+                        </div>
+                        <div class="col-12">
+                            <select name="income"
+                                    style="width: 100%; height: 50px; background-color: white; margin-bottom: 20px; border-radius: 0.3rem; color: grey"  required>
+                                <option value="Below $1000">Monthly income</option>
+                                <option value="$1,000 - $5,000">$1,000 - $5,000</option>
+                                <option value="$5,000 - $10,000">$5,000 - $10,000</option>
+                                <option value="$10,000 - $20,000">$10,000 - $20,000</option>
+                                <option value="$50,000 - $100,000">$50,000 - $100,000</option>
+                                <option value="$100,000 and above">$100,000 and above</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <input type="text" name="address" placeholder="Address"  required>
+                        </div>
+                        <div class="col-12">
+                            <input type="text" name="city" placeholder="City"  required>
+                        </div>
+                        <div class="col-12">
+                            <input type="text" name="state" placeholder="State"  required>
+                        </div>
+                        <div class="col-12">
+                            <input type="text" name="zip" placeholder="Zip/Postal code"  required>
+                        </div>
+                        <div class="col-12">
+                            <input type="text" name="country" placeholder="Country"  required>
+                        </div>
+                        <div class="col-12">
+                            <button class="theme-btn" type="submit">Continue</button>
+                        </div>
+                    </form>
+                        <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+                </div>
+                </center>
+
+
+            </div>
+        </div>
+    </section>
+
+        <footer class="footer-wrapper footer-2">
+        <div class="footer-widgets-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                        <div class="single-footer-widget wow fadeInLeft">
+                            <div class="about-us-widget">
+                                <a href="{% url 'index' %}" class="footer-logo d-block">
+                                    <img src="{% static './salford/logo_name.png' %}" alt="xmoze">
+                                </a>
+                                <p>WebsterCitiUnion helps millions of people get the best online banking experince all round the world. We strife to make internet banking easy, safe and secure
+                                    for your day to day use.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-3 offset-xl-1 col-md-6 col-12">
+                        <div class="single-footer-widget wow fadeInLeft" data-wow-delay=".2s">
+                            <div class="widget-title">
+                                <h5>Company</h5>
+                            </div>
+                            <ul>
+                                <li><a href="{% url 'about' %}">About WebsterCitiUnion</a></li>
+                                <li><a href="{% url 'contact' %}">Contact & support</a></li>
+                                <li><a href="{% url 'loans' %}">Loans</a></li>
+                                <li><a href="{% url 'support' %}">Support</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-2 col-lg-3 offset-xl-1 col-md-6 col-12">
+                        <div class="single-footer-widget wow fadeInLeft" data-wow-delay=".2s">
+                            <div class="widget-title">
+                                <h5>Contact information</h5>
+                            </div>
+                            <ul>
+                                <li><a href="{% url 'about' %}">Phone: +1 (504) 579-4234</a></li>
+                                <li><a href="{% url 'contact' %}">Address: 1894 Ward Hill Rd
+                                    Pennington Gap, Virginia(VA), 24277 </a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom-wrapper">
+            <div class="container">
+                <div class="footer-bottom-content d-md-flex justify-content-between">
+                    <div class="site-copyright wow fadeInUp" data-wow-delay=".2" data-wow-duration="1s">
+                        <p>&copy; 2023 <a href="{% url '#">Webster Citi Union</a> All Rights Reserved.</p>
+                    </div>
+                    <div class="social-links mt-4 mt-md-0 gray-bg wow fadeInUp" data-wow-delay=".5" data-wow-duration="1s">
+                        <a href="{% url '#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="{% url '#"><i class="fab fa-twitter"></i></a>
+                        <a href="{% url '#"><i class="fab fa-instagram"></i></a>
+                        <a href="{% url '#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--  ALl JS Plugins
+    ====================================== -->
+    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/js/modernizr.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.easing.js' %}"></script>
+    <script src="{% static 'assets/js/popper.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/js/imageload.min.js' %}"></script>
+    <script src="{% static 'assets/js/scrollUp.min.js' %}"></script>
+    <script src="{% static 'assets/js/slick.min.js' %}"></script>
+    <script src="{% static 'assets/js/magnific-popup.min.js' %}"></script>
+    <script src="{% static 'assets/js/wow.min.js' %}"></script>
+    <script src="{% static 'assets/js/metismenu.js' %}"></script>
+    <script src="{% static 'assets/js/active.js' %}"></script>
+</body>
+
+</html>

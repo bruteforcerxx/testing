@@ -1,0 +1,143 @@
+{% extends '_dash_header.html' %}
+{% load static %}
+
+{% block content %}
+ <div class="sidebar">
+    <div class="brand-logo"><a class="full-logo" href=""><img src="{% static './salford/logo.png' %}" alt="" width="40"></a></div>
+    <div class="menu">
+        <ul>
+            <li><a href="{% url 'transactions' %}">
+                    <span><i class="ri-time-line"></i></span>
+                    <span class="nav-text">Transaction history</span>
+                </a>
+            </li>
+            <li><a href="{% url 'dash' %}">
+                    <span><i class="ri-wallet-line"></i></span>
+                    <span class="nav-text">Dash board</span>
+                </a>
+            </li>
+          <li><a href="{% url 'send' %}">
+                    <span><i class="ri-send-plane-line"></i></span>
+                    <span class="nav-text">Send Money</span>
+                </a>
+            </li>
+              <li><a href="{% url 'loan' %}">
+                    <span><i class="ri-refund-2-line"></i></span>
+                    <span class="nav-text">Loan</span>
+                </a>
+            </li>
+
+            <li><a href="{% url 'profile' %}">
+                    <span><i class="ri-profile-line"></i></span>
+                    <span class="nav-text">Settings</span>
+                </a>
+            </li>
+            <li ><a href="{% url 'login' %}">
+                    <span><i class="ri-logout-circle-line"></i></span>
+                    <span class="nav-text">Signout</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+    <div class="content-body">
+        <div class="container">
+            <div class="page-title">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-xl-4">
+                        <div class="page-title-content">
+                            <h3>Transaction History</h3>
+                            <p class="mb-2">Hello {{fullname}}</p>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="breadcrumbs"><a href="#">Home </a><span><i> / </i></span><a href="#">Transactions</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-3 col-sm-6">
+                    <div class="stat-widget d-flex align-items-center bg-white">
+                        <div class="widget-icon me-3 bg-primary"></div>
+                        <div class="widget-content">
+                            <h3>{{total}}</h3>
+                            <p>Total transactions</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6">
+                    <div class="stat-widget d-flex align-items-center bg-white">
+                        <div class="widget-icon me-3 bg-success"></div>
+                        <div class="widget-content">
+                            <h3>{{success}}</h3>
+                            <p>Successful transactions</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6">
+                    <div class="stat-widget d-flex align-items-center bg-white">
+                        <div class="widget-icon me-3 bg-warning"></div>
+                        <div class="widget-content">
+                            <h3>{{pending}}</h3>
+                            <p>Pending transactions</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6">
+                    <div class="stat-widget d-flex align-items-center bg-white">
+                        <div class="widget-icon me-3 bg-danger"></div>
+                        <div class="widget-content">
+                            <h3>{{failed}}</h3>
+                            <p>Failed transactions</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-12">
+                    <div class="card">
+                        <div class="card-header flex-row">
+                            <h4 class="card-title">History </h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="invoice-table">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Account</th>
+                                                <th>Amount</th>
+                                                <th>type</th>
+                                                <th>Status</th>
+                                                <th>Date</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        {% for x in transactions %}
+                                            <tr>
+                                                <td>{{x.account}}</td>
+                                                <td>${{ x.amount }}</td>
+                                                <td>{{ x.type }}</td>
+                                                {%if x.status == "pending" %}
+                                                <td><span class="badge px-3 py-2 bg-warning">Transaction Pending</span></td>
+                                                {% endif %}
+                                                {%if x.status == "success" %}
+                                                <td><span class="badge px-3 py-2 bg-success">Transaction successful</span></td>
+                                                {% endif %}
+                                                {%if x.status == "failed" %}
+                                                <td><span class="badge px-3 py-2 bg-danger">Transaction failed</span></td>
+                                                {% endif %}
+                                                <td>{{x.date}}</td>
+                                            </tr>
+                                        {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

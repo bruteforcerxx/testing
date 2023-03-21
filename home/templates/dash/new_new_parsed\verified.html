@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ {% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <meta name="theme-color" content="#0d2dac">
+      <!-- Windows Phone -->
+ <meta name="msapplication-navbutton-color" content="#0d2dac">
+     <!-- iOS Safari -->
+ <meta name="apple-mobile-web-app-status-bar-style" content="#0d2dac">
+    <title>Green Trust Bank</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'dash/images/favicon.png' %}">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="{% static 'dash/css/style.css' %}">
+</head>
+
+<body class="dashboard">
+
+<div id="preloader">
+    <i>.</i>
+    <i>.</i>
+    <i>.</i>
+</div>
+
+<div id="main-wrapper">
+
+
+   <div class="header" >
+    <div class="container">
+       <div class="row">
+          <div class="col-xxl-12">
+             <div class="header-content">
+                <div class="header-left">
+                   <div class="brand-logo"><a class="mini-logo" href="/"><img src="{% static 'dash/images/logoi.png' %}" alt="" width="40"></a></div>
+                   <div>
+                      <a href = "mailto: support.greentrust@outlook.com"><small>support: support.greentrust@outlook.com</small></a>
+                   </div>
+                </div>
+
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+
+         <div class="row">
+            <div class="col-xxl-6 col-xl-6 col-lg-6">
+               <div class="card">
+                  <div class="card-header">
+                     <center>
+                     <label class="card-title" style="color: green">Dear Olu michael, your email has been verified successfully,
+                        you can now log into your account to continue enjoying our services.</label>
+                        </center>
+                  </div>
+                  <div class="card-body">
+                     <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                           <center>
+                           <img src="https://img.icons8.com/fluency/144/000000/checked-2.png"/>
+                           </center>
+                        </div>
+                        <div class="text-center mt-4">
+                           <a href="{% url 'dash' %}"><button class="btn btn-primary btn-block">Log into your account</button></a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+    <script src="{% static 'dash/vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'dash/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'dash/vendor/chartjs/chartjs.js' %}"></script>
+<script src="{% static 'dash/js/plugins/chartjs-investment.js' %}"></script>
+<script src="{% static 'dash/js/scripts.js' %}"></script>
+
+
+</body>
+
+</html>

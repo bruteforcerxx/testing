@@ -1,0 +1,210 @@
+{% extends '_dash_header.html' %}
+{% load static %}
+
+{% block content %}
+ <div class="sidebar">
+    <div class="brand-logo"><a class="full-logo" href=""><img src="{% static './salford/logo.png' %}" alt="" width="40"></a></div>
+    <div class="menu">
+        <ul>
+            <li><a href="{% url 'transactions' %}">
+                    <span><i class="ri-time-line"></i></span>
+                    <span class="nav-text">Transaction history</span>
+                </a>
+            </li>
+            <li><a href="{% url 'dash' %}">
+                    <span><i class="ri-wallet-line"></i></span>
+                    <span class="nav-text">Dash board</span>
+                </a>
+            </li>
+            <li><a href="{% url 'send' %}">
+                    <span><i class="ri-secure-payment-line"></i></span>
+                    <span class="nav-text">Send Money</span>
+                </a>
+            </li>
+
+            <li><a href="{% url 'profile' %}">
+                    <span><i class="ri-profile-line"></i></span>
+                    <span class="nav-text">Settings</span>
+                </a>
+            </li>
+            <li ><a href="{% url 'login' %}">
+                    <span><i class="ri-logout-circle-line"></i></span>
+                    <span class="nav-text">Signout</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+   <div class="content-body">
+      <div class="container">
+         <div class="page-title">
+            <div class="row align-items-center justify-content-between">
+               <div class="col-xl-4">
+                  <div class="page-title-content">
+                     <h3>Account</h3>
+                     <p class="mb-2" style="color: red">Your account has been suspended due to suspicious activity carried out on your account. Please contact support for possible resolution.</p>
+                  </div>
+               </div>
+               <div class="col-auto">
+                  <div class="breadcrumbs">
+                     <a href="#">
+                        Home /
+                     </a> Account</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-xxl-6 col-xl-6 col-lg-6">
+               <div class="card">
+                  <div class="card-header">
+                     <h4 class="card-title">Balance Details</h4>
+                  </div>
+                  <div class="card-body">
+                     <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                           <div class="balance-stats active">
+                              <p>Total balance</p>
+                              <h1 style="color: red">${{balance}}</h1>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-xl-12">
+                  <div class="card">
+                     <div class="card-header">
+                        <h4 class="card-title">Recent transactions</h4>
+                     </div>
+                     <div class="card-body">
+                        <div class="payments-content">
+                           <div class="table-responsive">
+                              <table class="table">
+                                 <thead>
+                                    <tr>
+                                       <th>Account</th>
+                                       <th>Amount</th>
+                                       <th>Type</th>
+                                       <th>Status</th>
+                                       <th>Date</th>
+                                    </tr>
+                                 </thead>
+                                 <tbody>
+                                  {% for x in recent %}
+                                            <tr>
+                                                <td>{{x.account}}</td>
+                                                <td>{{ x.amount }}</td>
+                                                <td>{{x.type}}</td>
+                                                {%if x.status == "pending" %}
+                                                <td><span class="badge px-3 py-2 bg-warning">Pending</span></td>
+                                                {% endif %}
+                                                {%if x.status == "success" %}
+                                                <td><span class="badge px-3 py-2 bg-success">successful</span></td>
+                                                {% endif %}
+                                                {%if x.status == "failed" %}
+                                                <td><span class="badge px-3 py-2 bg-danger">failed</span></td>
+                                                {% endif %}
+                                                <td>{{x.date}}</td>
+                                            </tr>
+                                        {% endfor %}
+                                 </tbody>
+                              </table>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            <div class=" col-xxl-6 col-xl-6 col-lg-6">
+               <div class="row">
+                  <div class="col-xxl-12 col-xl-12 col-lg-12">
+                     <div class="credit-card visa">
+                        <div class="type-brand">
+                           <h4>Debit Card</h4>
+                           <img src="{% static 'dash/images/cc/visa.png' %}" alt="">
+                        </div>
+                        <div class="cc-number">
+                           <h6>{{a1}}</h6>
+                           <h6>{{a2}}</h6>
+                           <h6>{{a3}}</h6>
+                           <h6>{{a4}}</h6>
+                        </div>
+                        <div class="cc-holder-exp">
+                           <h5>{{fullname}}</h5>
+                           <div class="exp"><span>EXP:</span><strong>12/24</strong></div>
+                        </div>
+                        <div class="cc-info">
+                           <div class="row justify-content-between align-items-center">
+                              <div class="col-5">
+                                 <div class="d-flex">
+                                    <p class="me-3">Status</p>
+                                    <p><strong>Active</strong></p>
+                                 </div>
+                                 <div class="d-flex">
+                                    <p class="me-3">Currency</p>
+                                    <p><strong>USD</strong></p>
+                                 </div>
+                              </div>
+                              <div class="col-xl-7">
+                                 <div class="d-flex justify-content-between">
+                                    <div class="ms-3">
+                                       <p>Credit Limit</p>
+                                       <p><strong>2000 USD</strong></p>
+                                    </div>
+                                    <div id="circle1"></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xxl-12 col-xl-12 col-lg-12">
+                     <div class="credit-card payoneer">
+                        <div class="type-brand">
+                           <h4>Debit Card</h4>
+                           <img src="{% static 'dash/images/cc/payoneer.png' %}" alt="">
+                        </div>
+                        <div class="cc-number">
+                           <h6>{{b1}}</h6>
+                           <h6>{{b2}}</h6>
+                           <h6>{{b3}}</h6>
+                           <h6>{{b4}}</h6>
+                        </div>
+                        <div class="cc-holder-exp">
+                           <h5>{{fullname}}</h5>
+                           <div class="exp"><span>EXP:</span><strong>12/24</strong></div>
+                        </div>
+                        <div class="cc-info">
+                           <div class="row">
+                              <div class="col-5">
+                                 <div class="d-flex">
+                                    <p class="me-3">Status</p>
+                                    <p><strong>Active</strong></p>
+                                 </div>
+                                 <div class="d-flex">
+                                    <p class="me-3">Currency</p>
+                                    <p><strong>USD</strong></p>
+                                 </div>
+                              </div>
+                              <div class="col-xl-7">
+                                 <div class="d-flex justify-content-between">
+                                    <div class="ms-3">
+                                       <p>Credit Limit</p>
+                                       <p><strong>1500/2000 USD</strong></p>
+                                    </div>
+                                    <div id="circle3"></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+{% endblock %}
+
